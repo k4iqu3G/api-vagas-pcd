@@ -1,0 +1,32 @@
+import com.google.gson.annotations.SerializedName;
+import java.util.List;
+
+public class Vaga {
+    @SerializedName("id")
+    private int id;
+    
+    @SerializedName("titulo")
+    private String titulo;
+    
+    @SerializedName("empresa")
+    private String empresa;
+    
+    @SerializedName("local")
+    private String local;
+    
+    @SerializedName("descricao")
+    private String descricao;
+    
+    @SerializedName("acessibilidade")
+    private List<String> acessibilidade;
+
+}
+import java.util.List;
+import retrofit2.Call;
+import retrofit2.http.GET;
+
+public interface VagasService {
+    // Coloque aqui o restante do caminho da URL (tudo o que vem depois do .com/)
+    @GET("seu-usuario/codigo-do-gist/raw/vagas.json")
+    Call<List<Vaga>> obterVagas();
+}
