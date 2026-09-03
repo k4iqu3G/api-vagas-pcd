@@ -1,32 +1,42 @@
-import com.google.gson.annotations.SerializedName;
-import java.util.List;
-
-public class Vaga {
-    @SerializedName("id")
-    private int id;
-    
-    @SerializedName("titulo")
-    private String titulo;
-    
-    @SerializedName("empresa")
-    private String empresa;
-    
-    @SerializedName("local")
-    private String local;
-    
-    @SerializedName("descricao")
-    private String descricao;
-    
-    @SerializedName("acessibilidade")
-    private List<String> acessibilidade;
-
-}
-import java.util.List;
-import retrofit2.Call;
-import retrofit2.http.GET;
-
-public interface VagasService {
-    // Coloque aqui o restante do caminho da URL (tudo o que vem depois do .com/)
-    @GET("seu-usuario/codigo-do-gist/raw/vagas.json")
-    Call<List<Vaga>> obterVagas();
-}
+[
+  {
+    "id": 1,
+    "titulo": "Analista de Infraestrutura Júnior",
+    "empresa": "TechCorp",
+    "local": "São Paulo, SP (Presencial)",
+    "descricao": "Atuação com administração de Windows Server, gerenciamento de Active Directory, OUs e automação de atualizações via GPOs. Manutenção de permissões locais.",
+    "acessibilidade": ["Rampas de acesso", "Banheiros adaptados", "Elevadores com aviso sonoro"]
+  },
+  {
+    "id": 2,
+    "titulo": "Desenvolvedor(a) Back-end (Java)",
+    "empresa": "InovaDev",
+    "local": "Remoto",
+    "descricao": "Desenvolvimento de lógicas de filtragem, manutenção de código em Java e configuração de ambientes de desenvolvimento.",
+    "acessibilidade": ["Trabalho 100% remoto", "Horário flexível", "Auxílio para montagem de home office acessível"]
+  },
+  {
+    "id": 3,
+    "titulo": "Técnico(a) de Redes",
+    "empresa": "SecureNet",
+    "local": "Campinas, SP (Híbrido)",
+    "descricao": "Configuração de firewalls, integração de diretórios LDAP, certificados SSL e suporte a acessos de usuários via VPN.",
+    "acessibilidade": ["Estação de trabalho com regulagem de altura", "Software de leitura de tela", "Teclados e mouses adaptados"]
+  },
+  {
+    "id": 4,
+    "titulo": "Analista de Suporte de TI",
+    "empresa": "Global Systems",
+    "local": "Rio de Janeiro, RJ (Presencial)",
+    "descricao": "Atendimento a chamados de Nível 1 e 2, configuração de softwares VoIP (como MicroSIP) e ajustes em pontos de rede.",
+    "acessibilidade": ["Libras - Intérprete disponível", "Ambiente sem barreiras arquitetônicas", "Sinalização tátil"]
+  },
+  {
+    "id": 5,
+    "titulo": "Analista de Dados Financeiros",
+    "empresa": "BankTech",
+    "local": "Remoto",
+    "descricao": "Criação de planilhas automatizadas com funções complexas (ÍNDICE, CORRESP, PROCX) e tratamento de dados para relatórios gerenciais.",
+    "acessibilidade": ["Trabalho 100% remoto", "Licença de softwares de acessibilidade visual", "Jornada reduzida opcional"]
+  }
+]
